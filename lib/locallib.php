@@ -21,7 +21,6 @@ function get_course_progress($courseid) {
  */
 function get_user_time_completed_course($courseid) {
 	global $DB, $USER;
-	//$sql = "SELECT timecompleted FROM {course_completions} WHERE userid=? AND course=?";
 	$timecompleted = $DB->get_record('course_completions', $params=['userid' => $USER->id, 'course' => $courseid], $fields='timecompleted');
 	return $timecompleted->timecompleted;
 }
@@ -76,7 +75,7 @@ function course_image($courseid) {
 }
 
 /**
- * 
+ * Return all the data we want to see
  *
  * @param int $id The id of the course.
  * @param string $name the fullname of the course.
@@ -93,7 +92,6 @@ function make_data($id, $name, $timecompleted, $courseprogress) {
         return null;
     }
     $strtime = null;
-    //$courseprogress = round(\core_completion\progress::get_course_progress_percentage($course, 4292));
     $courseimage = course_image($id);
     if (!empty($timecompleted)) {
     	$strtime = "<div class='timecompleted'>Data de conclusão: " . date('d/m/Y H:i', $timecompleted) . "</div>";
