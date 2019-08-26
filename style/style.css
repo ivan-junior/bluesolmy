@@ -8,10 +8,6 @@
   padding-top: 30px;
 }
 
-.opacity {
-  opacity: 0.2;
-}
-
 .base {
   position: relative;
   width: 100%;
@@ -26,22 +22,6 @@
   transition: transform .3s;
 }
 
-.base-estatico {
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  box-sizing: border-box;
-  padding-top: 1em;
-  padding-bottom: 1.5em;
-  -webkit-transition: transform .3s;
-  -moz-transition: transform .3s;
-  transition: transform .3s;
-
-}
-
-
-/* Efeito de zoom na div 'base' quando passar o mouse */
 .base:hover {
   -webkit-transform: scale(1.1);
   -moz--transform: scale(1.1);
@@ -67,16 +47,6 @@
   border-radius: 0.25rem;
   box-sizing: border-box;
   height: 200px;
-}
-
-.conteudo {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 1.25rem;
-  box-sizing: border-box;
-  text-align: center !important;
 }
 
 .conteudo-progresso {
@@ -115,21 +85,10 @@
   margin-bottom: 1rem;
 }
 
-.acesse-aqui {
-  color: white;
-  border-radius: 0.3rem;
-  border: 1px solid transparent;
-  outline: 0;
-}
-
-.acesse-aqui:hover {
-  color: white;
-}
-
 .timecompleted {
   font-size: 0.75rem;
 }
 
 .status .progress {
-	border-radius: 0.25rem;
+  border-radius: 0.25rem;
 }
