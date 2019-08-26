@@ -1,7 +1,7 @@
 /*
   * Desenvolvido por Ivan Junior
-  * 
-  * 
+  *
+  *
   */
 
 .topo {
@@ -75,7 +75,7 @@
 
 .area-progresso {
   position: absolute;
-  bottom: 5;
+  bottom: 0.8em;
   left: 7px;
   right: 7px;
   margin: auto;
