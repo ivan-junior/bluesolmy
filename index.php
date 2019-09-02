@@ -13,12 +13,13 @@ $PAGE->set_title($title);
 $PAGE->set_heading($title);
 $PAGE->set_pagelayout('standart');
 $PAGE->requires->css('/local/mymoodleprogress/style/style.css');
+$PAGE->navbar->add($title, $url);
 echo $OUTPUT->header();
 
 $data = get_all_information($USER->id);
-echo "<div class='row topo'>";
+echo "<div class='row mt-4'>";
 foreach ($data as $id => $course) {
 	echo make_data($course['id'], $course['fullname'], $course['timecompleted'], $course['progress']);
 }
-
+echo "</div>";
 echo $OUTPUT->footer();
