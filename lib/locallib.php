@@ -21,12 +21,16 @@ function get_course_progress($courseid) {
  */
 function get_user_time_completed_course($courseid) {
 	global $DB, $USER;
-	$timecompleted = $DB->get_record('course_completions', $params=['userid' => $USER->id, 'course' => $courseid], $fields='timecompleted');
-	return $timecompleted->timecompleted;
+    $timecompleted = $DB->get_record('course_completions', $params=['userid' => $USER->id, 'course' => $courseid], $fields='timecompleted');
+    if (empty($timecompleted)) {
+        return '';
+    } else {
+        return $timecompleted->timecompleted;
+    }
 }
 
 /**
- * Gets some information about de user enrolled courses
+ * Gets some information about the user enrolled courses
  *
  * @param $userid The id of the user.
  * @return array
