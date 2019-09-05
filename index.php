@@ -4,7 +4,6 @@ require_once('lib/locallib.php');
 require_login();
 
 $title = "My Moodle Progress";
-$pagetitle = "My Moodle Progress";
 $url = new moodle_url("/local/mymoodleprogress/index.php");
 $PAGE->set_context(context_system::instance());
 $PAGE->set_url($url);
